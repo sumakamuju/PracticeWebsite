@@ -6,11 +6,13 @@ export class BasePage{
     async navigate(url: string): Promise<void>{
         await this.page.goto(url);
     }
-    async getTitle(){
+    async getTitle(): Promise<string>{
         return await this.page.title();  
     }
-    async waitforpageload(){
+    async waitforpageload():Promise<void>{
         return await this.page.waitForLoadState();
     }
+
+    
 }
 

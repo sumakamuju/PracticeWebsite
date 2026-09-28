@@ -20,11 +20,11 @@ export class DynamicTablePage extends BasePage {
         await this.dynamictable.waitFor({ state: 'visible' })
         await this.dynamictable.click();
     }
-                // async student_name(): Promise<string[]>{
-                //    const names=await this.studentname.allInnerTexts();
-                //    console.log(names);
-                //    return names;
-                // }
+    // async student_name(): Promise<string[]>{
+    //    const names=await this.studentname.allInnerTexts();
+    //    console.log(names);
+    //    return names;
+    // }
     async student_name(): Promise<void> {
         this.waitforpageload();
         await this.studentname.first().waitFor();
@@ -37,15 +37,14 @@ export class DynamicTablePage extends BasePage {
         const pgcount = await pgno.count();
         console.log(`no of pages in table to check (includes prv & next): ${pgcount}`);
         console.log("student names from the table");
-        for(let j=1;j<=4;j++)
-          {
+        for (let j = 1; j <= 4; j++) {
             await pgno.nth(j).click();
             console.log(`clicked on page no : ${j}`);
             for (let i = 0; i < count; i++) {
                 const names = await this.studentname.nth(i).allTextContents();
                 console.log(names);
 
-          }
+            }
         }
         /* for (let j = 2; j < 4; j++) {
            
