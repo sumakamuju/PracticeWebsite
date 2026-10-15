@@ -10,5 +10,5 @@ test("enter any country name in text box", async({page, homePage, autocompletePa
     console.log(`No. of auto suggestions: ${await list.count()}`);
     list.nth(1);
     console.log(`List of auto suggestions: ${await list.nth(1).allInnerTexts()}`);
-    
+     
 })

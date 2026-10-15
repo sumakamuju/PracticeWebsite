@@ -23,7 +23,7 @@ test("open confirm box", async({page, homePage, dialogPage})=>{
     await dialogPage.confirmbox.click();
     await page.waitForTimeout(10000);
     const confrmsg=dialogPage.confirmboxmsg;
-    expect(confrmsg).toHaveText("Ok");
+    expect(confrmsg).toHaveText("Ok"); 
 })
 test("open prompt box", async({page, homePage, dialogPage})=>{
     

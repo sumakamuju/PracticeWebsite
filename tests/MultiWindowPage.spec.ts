@@ -27,5 +27,5 @@ test("open multiple tabs", async()=>
     //Approach 2: alternate
     console.log("Title of the parent page:", await parentPage.title());
     console.log("Title of the child page:", await childPage.title());
-    
-});  
+     
+});   
